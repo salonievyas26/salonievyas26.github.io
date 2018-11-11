@@ -238,7 +238,6 @@ function resetStars()
  {
 	 resetClockandTime();
 	 resetMoves();
-	 resetStars();
 	 resetCards();
 	 shuffleDeck();
  }
