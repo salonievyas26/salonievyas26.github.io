@@ -266,6 +266,7 @@ function resetStars()
 	 writeModalStats();
 	 console.log("I'm in gamover function");
 	 toggleModal();
+	 matched=0;
  }
  function replayGame()
  {
