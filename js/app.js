@@ -228,7 +228,7 @@ function resetMoves()
 function resetStars()
 {
 	const starList = document.querySelectorAll('.stars li');
-	for (star in starList)
+	for (star of starList)
 	{
 		star.style.display='inline';
 	}
@@ -238,6 +238,7 @@ function resetStars()
  {
 	 resetClockandTime();
 	 resetMoves();
+	 resetStars();
 	 resetCards();
 	 shuffleDeck();
  }
@@ -245,7 +246,7 @@ function resetStars()
  function resetCards()
  {
 	 const cards = document.querySelectorAll('.deck li');
-	 for( let card of cards)
+	 for(card of cards)
 	 {
 		 card.className='card';
 	 }
@@ -300,8 +301,8 @@ function resetStars()
  function getStars()
  {
 	 const stars = document.querySelectorAll('.stars li');
-	 let starcount = 0;
-	 for (let star of stars)
+	 starcount = 0;
+	 for (star of stars)
 	 {
 		 if(star.style.display!=='none')
 		 {
@@ -309,6 +310,7 @@ function resetStars()
 		 }
 	 }
 	 return starcount;
+	 console.log('Star Count:',starcount);
  } 
  
  document.querySelector('.cancel_button').addEventListener('click', () => {
