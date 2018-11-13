@@ -10,15 +10,19 @@ console.log(cards);
  *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
  *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
 */
+resetCards();
 const deck = document.querySelector('.deck');
 	deck.addEventListener('click' , event => {
 	const clickTarget = event.target;
+	
 	if(isClickValid(clickTarget))
 	{
+		
 		toggleCard(clickTarget);
 		addtoggleCard(clickTarget);
 		if(clockoff)
 		{
+			
 			startClock();
 			clockoff=false;
 		}
@@ -257,7 +261,7 @@ function resetStars()
  /*Adding Modal */
  document.querySelector('.replay_button').addEventListener('click',replayGame);
  
- let matched = 1;
+ let matched = 0;
  const TOTAL_PAIRS = 8;
  
  function gameOver()
