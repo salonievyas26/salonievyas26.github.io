@@ -240,6 +240,7 @@ function resetStars()
  
  function resetGame()
  {
+	 togglecards=[];
 	 resetClockandTime();
 	 resetMoves();
 	 resetStars();
